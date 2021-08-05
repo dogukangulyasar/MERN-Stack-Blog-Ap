@@ -3,6 +3,7 @@ import './App.css';
 import Add from './pages/Add';
 import Posts from './pages/Posts';
 import Home from './pages/Home';
+import Form from './components/Form';
 import {
   BrowserRouter as Router,
   Route,
@@ -29,6 +30,7 @@ function App() {
           <Route exact path="/" > <Home posts={posts} deletePost={deletePost} /> </Route>
           <Route exact path="/posts" > <Posts posts={posts} /></Route>
           <Route exact path="/add"> <Add /> </Route>
+          <Route path="/form"> <Form  posts={posts}/> </Route>
         </Switch>
       </div >
     </Router>

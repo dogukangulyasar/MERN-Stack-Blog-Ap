@@ -1,4 +1,7 @@
 import Navbar from "../components/Navbar"
+import {
+    Link,
+} from 'react-router-dom';
 const Home = ({ posts, deletePost }) => {
 
     return (
@@ -23,7 +26,7 @@ const Home = ({ posts, deletePost }) => {
                                     <td> {post.title} </td>
                                     <td> {post.imageUrl} </td>
                                     <td> {post.category} </td>
-                                    <td><button className="btn btn-success">Show</button> / <button onClick={() => deletePost(post._id)} className="btn btn-danger">Delete</button> </td>
+                                    <td> <Link to={'form/'+post._id}> <button className="btn btn-success">Show</button> </Link> / <button onClick={() => deletePost(post._id)} className="btn btn-danger">Delete</button> </td>
                                 </tr>
                             )
                         })
